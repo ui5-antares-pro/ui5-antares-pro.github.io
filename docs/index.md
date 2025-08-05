@@ -380,3 +380,70 @@ To do this, add the library to the `"types"` array in your `tsconfig.json` file:
 ```
 
 This step ensures that TypeScript can correctly resolve type definitions from both SAPUI5 and **UI5 Antares Pro**, enabling type checking, IntelliSense, and autocompletion throughout your project.
+
+### 8. (Optional) BTP Deployment Configuration (`xs-app.json`)
+
+If your application is deployed to the **SAP BTP environment**, it will typically include an `xs-app.json` file to configure route handling for the [Standalone or Managed AppRouter](https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?locale=en-US).
+
+By default, SAP’s UI5 project generator includes the following route in the `routes` section:
+
+```json title="xs-app.json"
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    ...
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    }  
+  ]
+}
+```
+
+This configuration forwards requests to `/resources/` to the **SAPUI5 CDN** via the `ui5` destination.  
+However, the **UI5 Antares Pro** library is not hosted on the SAPUI5 CDN — it resides in the **HTML5 Application Repository** of your deployed application.
+
+To make the library available, you must add the following route to the `xs-app.json` of your **UI5 application**:
+
+```json title="xs-app.json" hl_lines="6-11"
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    ...
+    {
+      "source": "^/resources/ui5/antares/pro/(.*)$",
+      "target": "/resources/ui5/antares/pro/$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/test-resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }      
+  ]
+}
+```
+
+!!! note
+
+    If you're using a **Standalone AppRouter**, ensure this configuration is added to the `xs-app.json` of the **UI5 application itself**, _not_ the AppRouter's `xs-app.json`.
+
+This route ensures that requests for **UI5 Antares Pro** resources are served from the HTML5 repository where the app is deployed.
