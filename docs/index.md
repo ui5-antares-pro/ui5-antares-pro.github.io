@@ -195,3 +195,188 @@ The table below shows the relationship between the supported **SAPUI5 LTS versio
 !!! note "Future Support"
 
     When SAP releases a new LTS version (e.g., 1.148.x), a corresponding tag (e.g., `ui5-1.148.x-latest`) will be introduced.
+
+## Installation
+
+Follow the steps below to install and configure **UI5 Antares Pro** in your SAPUI5 application.
+
+---
+
+### 1. Install via NPM
+
+Run the following command in the root directory of your UI5 app (where the `package.json` is located):
+
+```sh
+npm install ui5-antares-pro@ui5-1.136.x-latest
+```
+
+!!! info "Tag Selection"
+
+    Replace `ui5-1.136.x-latest` with the tag that matches your SAPUI5 version. Available tags:
+    
+    - `ui5-1.136.x-latest`
+    - `ui5-1.120.x-latest`
+    - `ui5-1.108.x-latest`
+
+---
+
+### 2. Add the Library to `manifest.json` (Dependencies)
+
+Add the library to the `"sap.ui5"."dependencies"."libs"` section:
+
+```json title="manifest.json" hl_lines="11"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "dependencies": {
+      ...
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        ...
+        "ui5.antares.pro": {}
+      }
+    }
+  }
+}
+```
+
+---
+
+### 3. Configure Resource Roots
+
+Add the following entry to the `"sap.ui5"."resourceRoots"` section in your `manifest.json`:
+
+```json title="manifest.json" hl_lines="6"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "resourceRoots": {
+      "ui5.antares.pro": "./resources/ui5/antares/pro"
+    }
+  }
+}
+```
+
+---
+
+### 4. (Optional) Enable Reuse Components (Component Mode)
+
+If you wish to use the provided reusable components (`create`, `update`, `delete`, `display`), follow these two steps:
+
+#### a. Add Component Dependencies
+
+Include them under `"sap.ui5"."dependencies"."components"`:
+
+```json title="manifest.json"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "dependencies": {
+      ...
+      "components": {
+        "ui5.antares.pro.v2.component.create": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.update": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.delete": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.display": {
+          "lazy": false
+        }
+      }      
+    }
+  }
+}
+```
+
+#### b. Define Component Usages
+
+Add entries under `"sap.ui5"."componentUsages"`:
+
+```json title="manifest.json"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "componentUsages": {
+      "ui5AntaresProCreateEntry": {
+        "name": "ui5.antares.pro.v2.component.create"
+      },
+      "ui5AntaresProUpdateEntry": {
+        "name": "ui5.antares.pro.v2.component.update"
+      },
+      "ui5AntaresProDeleteEntry": {
+        "name": "ui5.antares.pro.v2.component.delete"
+      },
+      "ui5AntaresProDisplayEntry": {
+        "name": "ui5.antares.pro.v2.component.display"
+      }
+    }    
+  }
+}
+```
+
+!!! tip "Component Container Integration"
+
+    The `componentUsages` keys (e.g., `ui5AntaresProCreateEntry`) can be used as the `usage` attribute in the `ComponentContainer`.
+
+---
+
+### 5. Adjust Build Script
+
+To ensure the library is included during the build, add the `--all` flag to your build script in `package.json`:
+
+```json title="package.json" hl_lines="4"
+{
+  ...
+  "scripts": {
+    "build": "ui5 build --all --config=ui5.yaml --clean-dest --dest dist"
+  }  
+}
+```
+
+---
+
+### 6. Configure Deployment (ui5-task-zipper)
+
+To ensure the library is included during deployment, set `includeDependencies: true` in your `ui5.yaml` or corresponding build configuration:
+
+```yaml title="ui5-deploy.yaml" hl_lines="7"
+...
+builder:
+  customTasks:
+    - name: ui5-task-zipper
+      afterTask: generateCachebusterInfo
+      configuration:
+        includeDependencies: true
+```
+
+!!! note
+
+    This configuration is essential for deploying the library alongside your app.
+
+### 7. (Optional) TypeScript Configuration
+
+If your SAPUI5 application is developed using **TypeScript**, you must inform the compiler about the types provided by **UI5 Antares Pro**.  
+To do this, add the library to the `"types"` array in your `tsconfig.json` file:
+
+```json title="tsconfig.json" hl_lines="6"
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      "@sapui5/types", 
+      "ui5-antares-pro"
+    ]
+  }
+}
+```
+
+This step ensures that TypeScript can correctly resolve type definitions from both SAPUI5 and **UI5 Antares Pro**, enabling type checking, IntelliSense, and autocompletion throughout your project.
