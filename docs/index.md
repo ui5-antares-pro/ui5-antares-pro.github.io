@@ -13,6 +13,7 @@
 [NODEJS_URL]: https://nodejs.org
 [NPMJS_URL]: https://www.npmjs.com
 [UI5_CLI_URL]: https://sap.github.io/ui5-tooling/v4
+[APPROUTER_URL]: https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?locale=en-US
 
 !!! info  
 
@@ -383,7 +384,7 @@ This step ensures that TypeScript can correctly resolve type definitions from bo
 
 ### 8. (Optional) BTP Deployment Configuration (`xs-app.json`)
 
-If your application is deployed to the **SAP BTP environment**, it will typically include an `xs-app.json` file to configure route handling for the [Standalone or Managed AppRouter](https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?locale=en-US).
+If your application is deployed to the **SAP BTP environment**, it will typically include an `xs-app.json` file to configure route handling for the [Standalone or Managed AppRouter][APPROUTER_URL].
 
 By default, SAP’s UI5 project generator includes the following route in the `routes` section:
 
