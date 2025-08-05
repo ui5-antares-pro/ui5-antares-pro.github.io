@@ -408,6 +408,10 @@ However, the **UI5 Antares Pro** library is not hosted on the SAPUI5 CDN — it 
 
 To make the library available, you must add the following route to the `xs-app.json` of your **UI5 application**:
 
+!!! danger "Attention"
+
+    The route highlighted below must be added before the `/resources/` route which is forwarding requests to the `ui5` destination.
+
 ```json title="xs-app.json" hl_lines="6-11"
 {
   "welcomeFile": "/index.html",
