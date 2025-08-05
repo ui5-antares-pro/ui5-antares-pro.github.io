@@ -13,7 +13,10 @@
 [NODEJS_URL]: https://nodejs.org
 [NPMJS_URL]: https://www.npmjs.com
 [UI5_CLI_URL]: https://sap.github.io/ui5-tooling/v4
+[UI5_CLI_NPM_URL]: https://www.npmjs.com/package/@ui5/cli
+[UI5_TOOLING_URL]: https://www.npmjs.com/package/@sap/ux-ui5-tooling
 [APPROUTER_URL]: https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?locale=en-US
+[UI5_CDN_URL]: https://ui5.sap.com
 
 !!! info  
 
@@ -452,3 +455,84 @@ To make the library available, you must add the following route to the `xs-app.j
     If you're using a **Standalone AppRouter**, ensure this configuration is added to the `xs-app.json` of the **UI5 application itself**, _not_ the AppRouter's `xs-app.json`.
 
 This route ensures that requests for **UI5 Antares Pro** resources are served from the HTML5 repository where the app is deployed.
+
+## Local Testing
+
+When developing a SAPUI5 application locally, the **UI5 Antares Pro** library can be loaded and used automatically after completing the standard installation and configuration steps. This is true regardless of whether the application is started using one of the following commands:
+
+- [@ui5/cli][UI5_CLI_NPM_URL]
+- [@sap/ux-ui5-tooling][UI5_TOOLING_URL]
+
+=== "@ui5/cli"
+
+    ```sh
+    ui5 serve
+    ```
+
+=== "@sap/ux-ui5-tooling"
+
+    ```sh
+    fiori run
+    ```
+
+Both approaches internally compile the application and expose it on a local development server. They also typically rely on a configuration file (e.g., ui5.yaml) located at the root of the project (alongside package.json) to proxy backend and UI5 resource requests.
+
+For applications generated using standard SAP generators (such as easy-ui5, SAP Fiori tools, or the Business Application Studio templates), this configuration file will most likely include the `fiori-tools-proxy` middleware. This middleware handles routing of requests during local development.
+
+### Role of the fiori-tools-proxy
+
+The `fiori-tools-proxy` middleware is responsible for forwarding certain request paths to external systems, such as:
+
+- The SAPUI5 CDN (for loading standard UI5 libraries)
+- Backend systems (e.g., for OData service calls)
+
+A typical configuration looks like this:
+
+```yaml title="ui5.yaml"
+specVersion: "3.1"
+metadata:
+  name: test.ui5.antares.pro.employeeui
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: true
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: https://backend-system:44300
+            client: '200'
+```
+
+In this setup:
+
+- All requests to `/resources` and `/test-resources` are forwarded to the SAPUI5 CDN at [https://ui5.sap.com][UI5_CDN_URL].
+- All requests to `/sap` are forwarded to the defined backend system.
+
+This setup works perfectly for loading standard SAPUI5 libraries like sap.m, sap.ui.core, etc.
+
+### The Problem: Custom Library Conflicts with the Proxy
+
+When the **UI5 Antares Pro** library is added as a dependency and built using ui5 build, its content is emitted into the `/resources` directory. This means that locally, after a successful build, the library is available under:
+
+- **/resources/ui5/antares/pro/**
+
+For example:
+
+- /resources/ui5/antares/pro/library.js
+- /resources/ui5/antares/pro/v2/entry/CreateEntry.js
+- /resources/ui5/antares/pro/v2/component/create/Component.js
+
+However, due to the way the `fiori-tools-proxy` is configured, all requests to `/resources` are blindly forwarded to the UI5 CDN — including those that actually target the **UI5 Antares Pro** library. This leads to the development server attempting to fetch:
+
+- https://ui5.sap.com/resources/ui5/antares/pro/library.js
+
+…which results in a **404 Not Found** error, because UI5 Antares Pro is a **custom** library and **does not exist on the SAPUI5 CDN**.
+
+This causes the application to break locally since the required library files cannot be resolved, even though they exist within the build output of the project itself.
