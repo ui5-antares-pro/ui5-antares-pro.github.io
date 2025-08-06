@@ -13,6 +13,10 @@
 [NODEJS_URL]: https://nodejs.org
 [NPMJS_URL]: https://www.npmjs.com
 [UI5_CLI_URL]: https://sap.github.io/ui5-tooling/v4
+[UI5_CLI_NPM_URL]: https://www.npmjs.com/package/@ui5/cli
+[UI5_TOOLING_URL]: https://www.npmjs.com/package/@sap/ux-ui5-tooling
+[APPROUTER_URL]: https://help.sap.com/docs/btp/sap-business-technology-platform/application-router?locale=en-US
+[UI5_CDN_URL]: https://ui5.sap.com
 
 !!! info  
 
@@ -122,7 +126,6 @@ v22.15.0
 
 The library officially supports the following **SAPUI5 LTS versions**:
 
-- `1.108.x`
 - `1.120.x`
 - `1.136.x`
 
@@ -132,7 +135,6 @@ While `x` refers to the latest patch available in each version series, it is lik
 
 To ensure clarity and flexibility in installation, **UI5 Antares Pro** utilizes **npm dist-tags** to distinguish releases by their target SAPUI5 version. The latest version of the library compatible with each supported SAPUI5 release will be tagged accordingly:
 
-- `ui5-1.108.x-latest`
 - `ui5-1.120.x-latest`
 - `ui5-1.136.x-latest`
 
@@ -168,11 +170,6 @@ The table below shows the relationship between the supported **SAPUI5 LTS versio
   </thead>
   <tbody>
     <tr>
-      <td><code>1.108.x</code></td>
-      <td><code>ui5-1.108.x-latest</code></td>
-      <td>Latest compatible release for 1.108.x</td>
-    </tr>
-    <tr>
       <td><code>1.120.x</code></td>
       <td><code>ui5-1.120.x-latest</code></td>
       <td>Latest compatible release for 1.120.x</td>
@@ -195,3 +192,339 @@ The table below shows the relationship between the supported **SAPUI5 LTS versio
 !!! note "Future Support"
 
     When SAP releases a new LTS version (e.g., 1.148.x), a corresponding tag (e.g., `ui5-1.148.x-latest`) will be introduced.
+
+## Installation
+
+Follow the steps below to install and configure **UI5 Antares Pro** in your SAPUI5 application.
+
+---
+
+### 1. Install via NPM
+
+Run the following command in the root directory of your UI5 app (where the `package.json` is located):
+
+```sh
+npm install ui5-antares-pro@ui5-1.136.x-latest
+```
+
+!!! info "Tag Selection"
+
+    Replace `ui5-1.136.x-latest` with the tag that matches your SAPUI5 version. Available tags:
+    
+    - `ui5-1.136.x-latest`
+    - `ui5-1.120.x-latest`
+
+---
+
+### 2. Add the Library to `manifest.json` (Dependencies)
+
+Add the library to the `"sap.ui5"."dependencies"."libs"` section:
+
+```json title="manifest.json" hl_lines="11"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "dependencies": {
+      ...
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        ...
+        "ui5.antares.pro": {}
+      }
+    }
+  }
+}
+```
+
+---
+
+### 3. Configure Resource Roots
+
+Add the following entry to the `"sap.ui5"."resourceRoots"` section in your `manifest.json`:
+
+```json title="manifest.json" hl_lines="6"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "resourceRoots": {
+      "ui5.antares.pro": "./resources/ui5/antares/pro"
+    }
+  }
+}
+```
+
+---
+
+### 4. (Optional) Enable Reuse Components (Component Mode)
+
+If you wish to use the provided reusable components (`create`, `update`, `delete`, `display`), follow these two steps:
+
+#### a. Add Component Dependencies
+
+Include them under `"sap.ui5"."dependencies"."components"`:
+
+```json title="manifest.json"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "dependencies": {
+      ...
+      "components": {
+        "ui5.antares.pro.v2.component.create": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.update": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.delete": {
+          "lazy": false
+        },
+        "ui5.antares.pro.v2.component.display": {
+          "lazy": false
+        }
+      }      
+    }
+  }
+}
+```
+
+#### b. Define Component Usages
+
+Add entries under `"sap.ui5"."componentUsages"`:
+
+```json title="manifest.json"
+{
+  ...
+  "sap.ui5": {
+    ...
+    "componentUsages": {
+      "ui5AntaresProCreateEntry": {
+        "name": "ui5.antares.pro.v2.component.create"
+      },
+      "ui5AntaresProUpdateEntry": {
+        "name": "ui5.antares.pro.v2.component.update"
+      },
+      "ui5AntaresProDeleteEntry": {
+        "name": "ui5.antares.pro.v2.component.delete"
+      },
+      "ui5AntaresProDisplayEntry": {
+        "name": "ui5.antares.pro.v2.component.display"
+      }
+    }    
+  }
+}
+```
+
+!!! tip "Component Container Integration"
+
+    The `componentUsages` keys (e.g., `ui5AntaresProCreateEntry`) can be used as the `usage` attribute in the `ComponentContainer`.
+
+---
+
+### 5. Adjust Build Script
+
+To ensure the library is included during the build, add the `--all` flag to your build script in `package.json`:
+
+```json title="package.json" hl_lines="4"
+{
+  ...
+  "scripts": {
+    "build": "ui5 build --all --config=ui5.yaml --clean-dest --dest dist"
+  }  
+}
+```
+
+---
+
+### 6. Configure Deployment (ui5-task-zipper)
+
+To ensure the library is included during deployment, set `includeDependencies: true` in your `ui5.yaml` or corresponding build configuration:
+
+```yaml title="ui5-deploy.yaml" hl_lines="7"
+...
+builder:
+  customTasks:
+    - name: ui5-task-zipper
+      afterTask: generateCachebusterInfo
+      configuration:
+        includeDependencies: true
+```
+
+!!! note
+
+    This configuration is essential for deploying the library alongside your app.
+
+### 7. (Optional) TypeScript Configuration
+
+If your SAPUI5 application is developed using **TypeScript**, you must inform the compiler about the types provided by **UI5 Antares Pro**.  
+To do this, add the library to the `"types"` array in your `tsconfig.json` file:
+
+```json title="tsconfig.json" hl_lines="6"
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      "@sapui5/types", 
+      "ui5-antares-pro"
+    ]
+  }
+}
+```
+
+This step ensures that TypeScript can correctly resolve type definitions from both SAPUI5 and **UI5 Antares Pro**, enabling type checking, IntelliSense, and autocompletion throughout your project.
+
+### 8. (Optional) BTP Deployment Configuration (`xs-app.json`)
+
+If your application is deployed to the **SAP BTP environment**, it will typically include an `xs-app.json` file to configure route handling for the [Standalone or Managed AppRouter][APPROUTER_URL].
+
+By default, SAP’s UI5 project generator includes the following route in the `routes` section:
+
+```json title="xs-app.json"
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    ...
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    }  
+  ]
+}
+```
+
+This configuration forwards requests to `/resources/` to the **SAPUI5 CDN** via the `ui5` destination.  
+However, the **UI5 Antares Pro** library is not hosted on the SAPUI5 CDN — it resides in the **HTML5 Application Repository** of your deployed application.
+
+To make the library available, you must add the following route to the `xs-app.json` of your **UI5 application**:
+
+!!! danger "Attention"
+
+    The route highlighted below must be added before the `/resources/` route which is forwarding requests to the `ui5` destination.
+
+```json title="xs-app.json" hl_lines="6-11"
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    ...
+    {
+      "source": "^/resources/ui5/antares/pro/(.*)$",
+      "target": "/resources/ui5/antares/pro/$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/resources/(.*)$",
+      "target": "/resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/test-resources/(.*)$",
+      "target": "/test-resources/$1",
+      "authenticationType": "none",
+      "destination": "ui5"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "authenticationType": "xsuaa"
+    }      
+  ]
+}
+```
+
+!!! note
+
+    If you're using a **Standalone AppRouter**, ensure this configuration is added to the `xs-app.json` of the **UI5 application itself**, _not_ the AppRouter's `xs-app.json`.
+
+This route ensures that requests for **UI5 Antares Pro** resources are served from the HTML5 repository where the app is deployed.
+
+## Local Testing
+
+When developing a SAPUI5 application locally, the **UI5 Antares Pro** library can be loaded and used automatically after completing the standard installation and configuration steps. This is true regardless of whether the application is started using one of the following commands:
+
+- [@ui5/cli][UI5_CLI_NPM_URL]
+- [@sap/ux-ui5-tooling][UI5_TOOLING_URL]
+
+=== "@ui5/cli"
+
+    ```sh
+    ui5 serve
+    ```
+
+=== "@sap/ux-ui5-tooling"
+
+    ```sh
+    fiori run
+    ```
+
+Both approaches internally compile the application and expose it on a local development server. They also typically rely on a configuration file (e.g., ui5.yaml) located at the root of the project (alongside package.json) to proxy backend and UI5 resource requests.
+
+For applications generated using standard SAP generators (such as easy-ui5, SAP Fiori tools, or the Business Application Studio templates), this configuration file will most likely include the `fiori-tools-proxy` middleware. This middleware handles routing of requests during local development.
+
+### Role of the fiori-tools-proxy
+
+The `fiori-tools-proxy` middleware is responsible for forwarding certain request paths to external systems, such as:
+
+- The SAPUI5 CDN (for loading standard UI5 libraries)
+- Backend systems (e.g., for OData service calls)
+
+A typical configuration looks like this:
+
+```yaml title="ui5.yaml"
+specVersion: "4.0"
+metadata:
+  name: test.ui5.antares.pro.employeeui
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: true
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: https://backend-system:44300
+            client: '200'
+```
+
+In this setup:
+
+- All requests to `/resources` and `/test-resources` are forwarded to the SAPUI5 CDN at [https://ui5.sap.com][UI5_CDN_URL].
+- All requests to `/sap` are forwarded to the defined backend system.
+
+This setup works perfectly for loading standard SAPUI5 libraries like sap.m, sap.ui.core, etc.
+
+### The Problem: Custom Library Conflicts with the Proxy
+
+When the **UI5 Antares Pro** library is added as a dependency and built using ui5 build, its content is emitted into the `/resources` directory. This means that locally, after a successful build, the library is available under:
+
+- **/resources/ui5/antares/pro/**
+
+For example:
+
+- /resources/ui5/antares/pro/library.js
+- /resources/ui5/antares/pro/v2/entry/CreateEntry.js
+- /resources/ui5/antares/pro/v2/component/create/Component.js
+
+However, due to the way the `fiori-tools-proxy` is configured, all requests to `/resources` are blindly forwarded to the UI5 CDN — including those that actually target the **UI5 Antares Pro** library. This leads to the development server attempting to fetch:
+
+- https://ui5.sap.com/resources/ui5/antares/pro/library.js
+
+…which results in a **404 Not Found** error, because UI5 Antares Pro is a **custom** library and **does not exist on the SAPUI5 CDN**.
+
+This causes the application to break locally since the required library files cannot be resolved, even though they exist within the build output of the project itself.
