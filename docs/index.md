@@ -126,7 +126,6 @@ v22.15.0
 
 The library officially supports the following **SAPUI5 LTS versions**:
 
-- `1.108.x`
 - `1.120.x`
 - `1.136.x`
 
@@ -136,7 +135,6 @@ While `x` refers to the latest patch available in each version series, it is lik
 
 To ensure clarity and flexibility in installation, **UI5 Antares Pro** utilizes **npm dist-tags** to distinguish releases by their target SAPUI5 version. The latest version of the library compatible with each supported SAPUI5 release will be tagged accordingly:
 
-- `ui5-1.108.x-latest`
 - `ui5-1.120.x-latest`
 - `ui5-1.136.x-latest`
 
@@ -171,11 +169,6 @@ The table below shows the relationship between the supported **SAPUI5 LTS versio
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><code>1.108.x</code></td>
-      <td><code>ui5-1.108.x-latest</code></td>
-      <td>Latest compatible release for 1.108.x</td>
-    </tr>
     <tr>
       <td><code>1.120.x</code></td>
       <td><code>ui5-1.120.x-latest</code></td>
@@ -220,7 +213,6 @@ npm install ui5-antares-pro@ui5-1.136.x-latest
     
     - `ui5-1.136.x-latest`
     - `ui5-1.120.x-latest`
-    - `ui5-1.108.x-latest`
 
 ---
 
@@ -489,7 +481,7 @@ The `fiori-tools-proxy` middleware is responsible for forwarding certain request
 A typical configuration looks like this:
 
 ```yaml title="ui5.yaml"
-specVersion: "3.1"
+specVersion: "4.0"
 metadata:
   name: test.ui5.antares.pro.employeeui
 type: application
