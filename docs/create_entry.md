@@ -382,3 +382,49 @@ To utilize the functionality provided by this class, it is required to instantia
   </tbody>
 </table>
 
+=== "TypeScript"
+
+    ```ts linenums="1" hl_lines="2 13-16" title="Main.controller.ts"
+    import Controller from "sap/ui/core/mvc/Controller";
+    import CreateEntry from "ui5/antares/pro/v2/entry/CreateEntry"; // Import the class
+
+    /**
+     * @namespace your.apps.namespace
+     */
+    export default class Main extends Controller {
+        public onInit() {
+
+        }
+
+        public async onCreateProduct() {
+            const entry = new CreateEntry({
+                controller: this, // Controller instance
+                entitySet: "Products" // EntitySet name
+            }); 
+        }
+    }
+    ```
+
+=== "JavaScript"
+
+    ```js linenums="1" hl_lines="3 13-16" title="Main.controller.js"
+    sap.ui.define([
+        "sap/ui/core/mvc/Controller",
+        "ui5/antares/pro/v2/entry/CreateEntry" // Import the class
+    ], (Controller, CreateEntry) => {
+        "use strict";
+
+        return Controller.extend("your.apps.namespace.Main", {
+            onInit: function () {
+
+            },
+
+            onCreateProduct: async function () {
+                const entry = new CreateEntry({
+                    controller: this, // Controller instance
+                    entitySet: "Products" // EntitySet name
+                });
+            }
+        });
+    });
+    ```
