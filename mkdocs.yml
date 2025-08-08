@@ -34,6 +34,7 @@ theme:
 
 nav:
   - UI5 Antares Pro: index.md
+  - CreateEntry: create_entry.md
   - Change Log: change_log.md
 
 extra:
