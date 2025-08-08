@@ -6,10 +6,10 @@ theme:
     code: Roboto Mono    
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.path
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -33,7 +33,11 @@ theme:
   logo: img/logo.png
 
 nav:
-  - UI5 Antares Pro: index.md
+  - UI5 Antares Pro:
+    - Introduction: index.md
+    - License and Usage Notice: home/license_and_usage_notice.md
+    - Installation: home/installation.md
+    - Local Testing: home/local_testing.md
   - CreateEntry: create_entry.md
   - UpdateEntry: update_entry.md
   - DeleteEntry: delete_entry.md
