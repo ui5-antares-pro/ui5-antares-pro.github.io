@@ -1,5 +1,3 @@
-# Core Features
-
 This section documents the core capabilities, configuration options, and behaviors that are shared across all **Entry classes** in the library — namely [**`CreateEntry`**](create_entry.md), [**`UpdateEntry`**](update_entry.md), [**`DeleteEntry`**](delete_entry.md), and [**`DisplayEntry`**](display_entry.md).
 
 The features described here represent the foundational functionality of the **UI5 Antares Pro** library when working with OData V2 models for creating, updating, deleting, or displaying entity data. These capabilities include parameter configurations, UI generation rules, validation mechanisms, value help integration, and extensibility points.

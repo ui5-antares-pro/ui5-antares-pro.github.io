@@ -6,10 +6,10 @@ theme:
     code: Roboto Mono    
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.path
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -33,12 +33,20 @@ theme:
   logo: img/logo.png
 
 nav:
-  - UI5 Antares Pro: index.md
-  - CreateEntry: create_entry.md
+  - UI5 Antares Pro:
+    - Introduction: index.md
+    - License and Usage Notice: home/license_and_usage_notice.md
+    - Installation: home/installation.md
+    - Local Testing: home/local_testing.md
+  - CreateEntry:
+    - Overview: create_entry.md
+    - Key Features: create_entry/key_features.md
+    - Constructor: create_entry/constructor.md
   - UpdateEntry: update_entry.md
   - DeleteEntry: delete_entry.md
   - DisplayEntry: display_entry.md
-  - Core Features: core_features.md
+  - Core Features:
+    - Introduction: core_features.md
   - Change Log: change_log.md
 
 extra:
@@ -57,6 +65,9 @@ markdown_extensions:
 
 repo_url: https://github.com/hasanciftci26/ui5-antares-pro
 repo_name: ui5-antares-pro
+
+extra_css:
+  - stylesheets/extra.css
 
 copyright: >
   &copy; 2025 <a href="https://github.com/hasanciftci26" target="_blank" rel="noopened">Hasan Ciftci</a>
