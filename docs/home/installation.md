@@ -6,6 +6,8 @@
 
 This page provides detailed installation and configuration instructions for the **UI5 Antares Pro** library.
 
+---
+
 ## Prerequisites
 
 Before installing and using **UI5 Antares Pro**, ensure that the following tools are available in your development environment:
@@ -41,6 +43,8 @@ v22.15.0
     ui5 -v
     4.0.15
     ```
+
+---
 
 ## Versioning Strategy
 
@@ -117,11 +121,11 @@ The table below shows the relationship between the supported **SAPUI5 LTS versio
 
     When SAP releases a new LTS version (e.g., 1.148.x), a corresponding tag (e.g., `ui5-1.148.x-latest`) will be introduced.
 
+---
+
 ## Installation Steps
 
 Follow the steps below to install and configure **UI5 Antares Pro** in your SAPUI5 application.
-
----
 
 ### 1. Install via NPM
 
@@ -137,8 +141,6 @@ npm install ui5-antares-pro@ui5-1.136.x-latest
     
     - `ui5-1.136.x-latest`
     - `ui5-1.120.x-latest`
-
----
 
 ### 2. Add the Library to `manifest.json` (Dependencies)
 
@@ -162,8 +164,6 @@ Add the library to the `"sap.ui5"."dependencies"."libs"` section:
 }
 ```
 
----
-
 ### 3. Configure Resource Roots
 
 Add the following entry to the `"sap.ui5"."resourceRoots"` section in your `manifest.json`:
@@ -179,8 +179,6 @@ Add the following entry to the `"sap.ui5"."resourceRoots"` section in your `mani
   }
 }
 ```
-
----
 
 ### 4. (Optional) Enable Reuse Components (Component Mode)
 
@@ -247,8 +245,6 @@ Add entries under `"sap.ui5"."componentUsages"`:
 
     The `componentUsages` keys (e.g., `ui5AntaresProCreateEntry`) can be used as the `usage` attribute in the `ComponentContainer`.
 
----
-
 ### 5. Adjust Build Script
 
 To ensure the library is included during the build, add the `--all` flag to your build script in `package.json`:
@@ -261,8 +257,6 @@ To ensure the library is included during the build, add the `--all` flag to your
   }  
 }
 ```
-
----
 
 ### 6. Configure Deployment (ui5-task-zipper)
 

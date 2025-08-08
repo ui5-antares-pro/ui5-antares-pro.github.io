@@ -18,6 +18,8 @@ Leveraging the OData model defined in the consuming application, the library dyn
 	**UI5 Antares Pro** is the successor of the [UI5 Antares][UI5_ANTARES_URL] library, completely rebuilt from the ground up with a renewed code base to ensure higher code quality, better maintainability, and enhanced performance.
 	It adds advanced capabilities such as comprehensive navigation handling and improved flexibility for robust SAPUI5 apps.
 
+---
+
 ## Integration Modes
 
 Two integration modes are supported:
@@ -27,6 +29,8 @@ Two integration modes are supported:
 
 - **Component Mode**  
   A reusable UI component is exposed, which can be integrated via [sap.ui.core.ComponentContainer][UI5_COMPONENT_CONTAINER_URL]. This allows the consumer to position and style the component freely within the application layout while benefiting from the same functionality.
+
+---
 
 ## Core Features
 
@@ -53,9 +57,13 @@ UI5 Antares Pro promotes consistency, reusability, and reduced development effor
 - **TypeScript-Based**  
   Developed in TypeScript for improved maintainability and type safety.
 
+---
+
 ## Compatibility
 
 UI5 Antares Pro is developed using [TypeScript][TYPESCRIPT_URL] and is fully compatible with both JavaScript-based and TypeScript-based SAPUI5 applications.
+
+---
 
 ## Change Log
 

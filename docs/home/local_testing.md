@@ -24,6 +24,8 @@ Both approaches internally compile the application and expose it on a local deve
 
 For applications generated using standard SAP generators (such as easy-ui5, SAP Fiori tools, or the Business Application Studio templates), this configuration file will most likely include the `fiori-tools-proxy` middleware. This middleware handles routing of requests during local development.
 
+---
+
 ## Role of the fiori-tools-proxy
 
 The `fiori-tools-proxy` middleware is responsible for forwarding certain request paths to external systems, such as:
@@ -61,6 +63,8 @@ In this setup:
 - All requests to `/sap` are forwarded to the defined backend system.
 
 This setup works perfectly for loading standard SAPUI5 libraries like sap.m, sap.ui.core, etc.
+
+---
 
 ## The Problem: Custom Library Conflicts with the Proxy
 
@@ -116,8 +120,6 @@ Once this block is removed, the **fiori-tools-proxy** will automatically load th
 
 - The UI5 CDN URL or the UI5 version **cannot** be changed via the `fiori-tools-proxy` configuration anymore.
 - Any change to the UI5 version must be made in the `manifest.json` file instead.
-
----
 
 === "Before"
 

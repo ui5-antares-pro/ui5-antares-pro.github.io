@@ -38,7 +38,10 @@ nav:
     - License and Usage Notice: home/license_and_usage_notice.md
     - Installation: home/installation.md
     - Local Testing: home/local_testing.md
-  - CreateEntry: create_entry.md
+  - CreateEntry:
+    - Overview: create_entry.md
+    - Key Features: create_entry/key_features.md
+    - Constructor: create_entry/constructor.md
   - UpdateEntry: update_entry.md
   - DeleteEntry: delete_entry.md
   - DisplayEntry: display_entry.md
@@ -61,6 +64,9 @@ markdown_extensions:
 
 repo_url: https://github.com/hasanciftci26/ui5-antares-pro
 repo_name: ui5-antares-pro
+
+extra_css:
+  - stylesheets/extra.css
 
 copyright: >
   &copy; 2025 <a href="https://github.com/hasanciftci26" target="_blank" rel="noopened">Hasan Ciftci</a>
