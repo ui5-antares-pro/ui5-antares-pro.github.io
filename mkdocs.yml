@@ -45,7 +45,8 @@ nav:
   - UpdateEntry: update_entry.md
   - DeleteEntry: delete_entry.md
   - DisplayEntry: display_entry.md
-  - Core Features: core_features.md
+  - Core Features:
+    - Introduction: core_features.md
   - Change Log: change_log.md
 
 extra:
