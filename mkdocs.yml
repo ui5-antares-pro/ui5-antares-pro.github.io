@@ -35,6 +35,10 @@ theme:
 nav:
   - UI5 Antares Pro: index.md
   - CreateEntry: create_entry.md
+  - UpdateEntry: update_entry.md
+  - DeleteEntry: delete_entry.md
+  - DisplayEntry: display_entry.md
+  - Core Features: core_features.md
   - Change Log: change_log.md
 
 extra:
