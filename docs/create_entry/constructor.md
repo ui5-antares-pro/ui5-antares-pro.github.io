@@ -264,6 +264,10 @@ To utilize the functionality provided by this class, it is required to instantia
   </tbody>
 </table>
 
+---
+
+## Example
+
 === "TypeScript"
 
     ```ts linenums="1" hl_lines="2 13-16" title="Main.controller.ts"
