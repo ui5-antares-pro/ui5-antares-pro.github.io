@@ -21,32 +21,55 @@ By default, the Entry classes place the generated form as the first element with
 
 This feature is especially useful when multiple navigation properties are configured, each producing its own table or form inside the same container. Additionally, `ui5.antares.pro.v2.metadata.NavigationProperty` instances can also define an **`index`** to control the placement of their generated content.
 
-<table>
-  <thead>
-    <tr>
-      <th>Entry Class</th>
-      <th>Supported</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="../../create_entry">CreateEntry</a></td>
-      <td style="text-align:center;">✅ Yes</td>
-    </tr>
-    <tr>
-      <td><a href="../../update_entry">UpdateEntry</a></td>
-      <td style="text-align:center;">✅ Yes</td>
-    </tr>
-    <tr>
-      <td><a href="../../delete_entry">DeleteEntry</a></td>
-      <td style="text-align:center;">✅ Yes</td>
-    </tr>
-    <tr>
-      <td><a href="../../display_entry">DisplayEntry</a></td>
-      <td style="text-align:center;">✅ Yes</td>
-    </tr>
-  </tbody>
-</table>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Entry Class</th>
+        <th>Supported</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="../../create_entry">CreateEntry</a></td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+        <td><a href="../../update_entry">UpdateEntry</a></td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+        <td><a href="../../delete_entry">DeleteEntry</a></td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+        <td><a href="../../display_entry">DisplayEntry</a></td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Mode</th>
+        <th>Supported</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dialog Mode</td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+        <td>Component Mode</td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
 
 ---
 
@@ -86,7 +109,7 @@ This feature is especially useful when multiple navigation properties are config
           <td style="width: 25%;"><code>setIndex(newValue)</code></td>
           <td><code>newValue</code></td>
           <td><code>number</code></td>
-          <td>Yes</td>
+          <td>✅ Yes</td>
           <td>Sets the index for the generated form; supports negative values for relative positioning.</td>
         </tr>
       </tbody>
@@ -150,6 +173,161 @@ This feature is especially useful when multiple navigation properties are config
                     name: "toSupplier",
                     index: 0 // Position the navigation property content before the main form
                 }));
+            }
+        });
+    });
+    ```
+
+---
+
+## Dialog Title (dialogTitle)
+
+![string](https://img.shields.io/badge/string-blue?style=flat-square)
+
+In dialog mode, the Entry classes generate a dialog with a default title composed of localized text and the associated `EntitySet` name. This default title ensures clarity for end users, but consumers can easily override it using the `dialogTitle` configuration.
+
+This feature is especially useful when the default title is too generic or when you want to provide a more descriptive, user-friendly title in the dialog header.
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+  <table>
+     <thead>
+        <tr>
+           <th>Entry Class</th>
+           <th>Supported</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+           <td><a href="../../create_entry">CreateEntry</a></td>
+           <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+           <td><a href="../../update_entry">UpdateEntry</a></td>
+           <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+           <td><a href="../../delete_entry">DeleteEntry</a></td>
+           <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+           <td><a href="../../display_entry">DisplayEntry</a></td>
+           <td style="text-align:center;">✅ Yes</td>
+        </tr>
+     </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Mode</th>
+        <th>Supported</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dialog Mode</td>
+        <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+        <td>Component Mode</td>
+        <td style="text-align:center;">❌ No</td>
+      </tr>
+    </tbody>
+  </table>  
+
+</div>
+
+---
+
+=== "Getter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Method</th>
+          <th>Returns</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 25%;"><code>getDialogTitle()</code></td>
+          <td><code>string</code></td>
+          <td>Returns the current dialog title. If not explicitly set, returns the generated default title.</td>
+        </tr>
+      </tbody>
+    </table>
+
+=== "Setter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Method</th>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Mandatory</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 25%;"><code>setDialogTitle(newValue)</code></td>
+          <td><code>newValue</code></td>
+          <td><code>string</code></td>
+          <td>✅ Yes</td>
+          <td>Sets a custom title for the dialog, replacing the generated default title.</td>
+        </tr>
+      </tbody>
+    </table>
+
+### Example
+
+=== "TypeScript"
+
+    ```ts linenums="1" hl_lines="16" title="Main.controller.ts"
+    import Controller from "sap/ui/core/mvc/Controller";
+    import CreateEntry from "ui5/antares/pro/v2/entry/CreateEntry"; // Import the class
+
+    /**
+     * @namespace your.apps.namespace
+     */
+    export default class Main extends Controller {
+        public onInit() {
+        
+        }
+
+        public async onCreateProduct() {
+            const entry = new CreateEntry({
+                controller: this, 
+                entitySet: "Products",
+                dialogTitle: "Create New Product" // Override the default dialog title
+            });
+        }
+    }
+    ```
+
+=== "JavaScript"
+
+    ```js linenums="1" hl_lines="16" title="Main.controller.js"
+    sap.ui.define([
+        "sap/ui/core/mvc/Controller",
+        "ui5/antares/pro/v2/entry/CreateEntry" // Import the class
+    ], (Controller, CreateEntry) => {
+        "use strict";
+
+        return Controller.extend("your.apps.namespace.Main", {
+            onInit: function () {
+            
+            },
+
+            onCreateProduct: async function () {
+                const entry = new CreateEntry({
+                    controller: this, 
+                    entitySet: "Products",
+                    dialogTitle: "Create New Product" // Override the default dialog title
+                });
             }
         });
     });
