@@ -47,6 +47,7 @@ nav:
   - DisplayEntry: display_entry.md
   - Core Features:
     - Introduction: core_features.md
+    - UI Configuration & Layout: core_features/ui_configuration_and_layout.md
   - Change Log: change_log.md
 
 extra:
