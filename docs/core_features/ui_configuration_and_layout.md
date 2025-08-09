@@ -21,53 +21,69 @@ By default, the Entry classes place the generated form as the first element with
 
 This feature is especially useful when multiple navigation properties are configured, each producing its own table or form inside the same container. Additionally, `ui5.antares.pro.v2.metadata.NavigationProperty` instances can also define an **`index`** to control the placement of their generated content.
 
-<div style="display: flex; gap: 20px; align-items: flex-start;">
+<style>
+  /* On small screens, stack the divs vertically */
+  @media (max-width: 600px) {
+    .responsive-flex {
+      flex-direction: column !important;
+      gap: 0px !important; /* smaller gap for stacked layout */
+    }
+  }
+</style>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Entry Class</th>
-        <th>Supported</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="../../create_entry">CreateEntry</a></td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-      <tr>
-        <td><a href="../../update_entry">UpdateEntry</a></td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-      <tr>
-        <td><a href="../../delete_entry">DeleteEntry</a></td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-      <tr>
-        <td><a href="../../display_entry">DisplayEntry</a></td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
 
-  <table>
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Supported</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dialog Mode</td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-      <tr>
-        <td>Component Mode</td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Entry Class</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="../../create_entry">CreateEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../update_entry">UpdateEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../delete_entry">DeleteEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../display_entry">DisplayEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>
 
@@ -188,53 +204,59 @@ In dialog mode, the Entry classes generate a dialog with a default title compose
 
 This feature is especially useful when the default title is too generic or when you want to provide a more descriptive, user-friendly title in the dialog header.
 
-<div style="display: flex; gap: 20px; align-items: flex-start;">
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
 
-  <table>
-     <thead>
-        <tr>
-           <th>Entry Class</th>
-           <th>Supported</th>
-        </tr>
-     </thead>
-     <tbody>
-        <tr>
-           <td><a href="../../create_entry">CreateEntry</a></td>
-           <td style="text-align:center;">✅ Yes</td>
-        </tr>
-        <tr>
-           <td><a href="../../update_entry">UpdateEntry</a></td>
-           <td style="text-align:center;">✅ Yes</td>
-        </tr>
-        <tr>
-           <td><a href="../../delete_entry">DeleteEntry</a></td>
-           <td style="text-align:center;">✅ Yes</td>
-        </tr>
-        <tr>
-           <td><a href="../../display_entry">DisplayEntry</a></td>
-           <td style="text-align:center;">✅ Yes</td>
-        </tr>
-     </tbody>
-  </table>
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Supported</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dialog Mode</td>
-        <td style="text-align:center;">✅ Yes</td>
-      </tr>
-      <tr>
-        <td>Component Mode</td>
-        <td style="text-align:center;">❌ No</td>
-      </tr>
-    </tbody>
-  </table>  
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
 
 </div>
 
