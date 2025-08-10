@@ -47,7 +47,15 @@ nav:
   - DisplayEntry: display_entry.md
   - Core Features:
     - Introduction: core_features.md
-    - UI Configuration & Layout: core_features/ui_configuration_and_layout.md
+    - UI Settings: 
+      - Configuration: core_features/ui_settings/configuration.md
+      - Layout: core_features/ui_settings/layout.md
+      - Label Generation: core_features/ui_settings/label_generation.md
+      - Custom Element: core_features/ui_settings/custom_element.md
+      - Custom Content: core_features/ui_settings/custom_content.md
+    - Utilities:
+      - Value List: core_features/utilities/value_list.md
+      - Validation Logic: core_features/utilities/validation_logic.md
   - Change Log: change_log.md
 
 extra:
