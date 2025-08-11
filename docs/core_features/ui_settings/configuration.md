@@ -357,6 +357,8 @@ This feature is especially useful when the default title is too generic or when 
     });
     ```
 
+---
+
 ## Form Title (formTitle)
 
 ![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
@@ -515,6 +517,8 @@ A custom `formTitle` is particularly helpful when forms are part of a larger UI 
         });
     });
     ```
+
+---
 
 ## Form Type (formType)
 
@@ -699,6 +703,8 @@ This property allows consumers to switch to a [SimpleForm](https://sapui5.hana.o
     });
     ```
 
+---
+
 ## Submit Button Text (submitButtonText)
 
 ![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
@@ -861,6 +867,8 @@ Text displayed on the submit button within the generated dialog. A default local
         });
     });
     ```
+
+---
 
 ## Submit Button Type (submitButtonType)
 
@@ -1027,6 +1035,8 @@ Text displayed on the submit button within the generated dialog. A default local
     });
     ```
 
+---
+
 ## Close Button Text (closeButtonText)
 
 ![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
@@ -1189,6 +1199,8 @@ Text displayed on the close button within the generated dialog. A default locali
         });
     });
     ```
+
+---
 
 ## Close Button Type (closeButtonType)
 
