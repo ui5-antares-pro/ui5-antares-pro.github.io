@@ -357,6 +357,8 @@ This feature is especially useful when the default title is too generic or when 
     });
     ```
 
+---
+
 ## Form Title (formTitle)
 
 ![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
@@ -515,6 +517,8 @@ A custom `formTitle` is particularly helpful when forms are part of a larger UI 
         });
     });
     ```
+
+---
 
 ## Form Type (formType)
 
@@ -699,15 +703,15 @@ This property allows consumers to switch to a [SimpleForm](https://sapui5.hana.o
     });
     ```
 
+---
+
 ## Submit Button Text (submitButtonText)
 
 ![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
 
 ![Localized Text](https://img.shields.io/badge/Default%20Value-Localized%20Text-orange?style=flat-square)
 
-Text displayed on the submit button within the generated dialog.
-A default localized text is provided by the library based on the current language.
-This property allows the consumer to override the button text.
+Text displayed on the submit button within the generated dialog. A default localized text is provided by the library based on the current language. This property allows the consumer to override the button text.
 
 !!! note
 
@@ -863,6 +867,8 @@ This property allows the consumer to override the button text.
         });
     });
     ```
+
+---
 
 ## Submit Button Type (submitButtonType)
 
@@ -1023,6 +1029,338 @@ This property allows the consumer to override the button text.
                     controller: this, 
                     entitySet: "Products",
                     submitButtonType: ButtonType.Reject // Override the submit button type
+                });
+            }
+        });
+    });
+    ```
+
+---
+
+## Close Button Text (closeButtonText)
+
+![string](https://img.shields.io/badge/Type-string-blue?style=flat-square)
+
+![Localized Text](https://img.shields.io/badge/Default%20Value-Localized%20Text-orange?style=flat-square)
+
+Text displayed on the close button within the generated dialog. A default localized text is provided by the library based on the current language. This property allows the consumer to override the button text.
+
+!!! note
+
+    The library **will not generate** any button in the `Component Mode` regardless of which Entry class is utilized.
+
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+---
+
+=== "Getter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Method</th>
+          <th>Returns</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 25%;"><code>getCloseButtonText()</code></td>
+          <td><code>string</code></td>
+          <td>Returns the current close button text. If not explicitly set, returns the default localized text.</td>
+        </tr>
+      </tbody>
+    </table>
+
+=== "Setter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 35%;">Method</th>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Mandatory</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 35%;"><code>setCloseButtonText(newValue)</code></td>
+          <td><code>newValue</code></td>
+          <td><code>string</code></td>
+          <td>✅ Yes</td>
+          <td>Sets a custom text for the close button, overriding the default localized text.</td>
+        </tr>
+      </tbody>
+    </table>
+
+### Example
+
+=== "TypeScript"
+
+    ```ts linenums="1" hl_lines="16" title="Main.controller.ts"
+    import Controller from "sap/ui/core/mvc/Controller";
+    import CreateEntry from "ui5/antares/pro/v2/entry/CreateEntry"; // Import the class
+
+    /**
+     * @namespace your.apps.namespace
+     */
+    export default class Main extends Controller {
+        public onInit() {
+        
+        }
+
+        public async onCreateProduct() {
+            const entry = new CreateEntry({
+                controller: this, 
+                entitySet: "Products",
+                closeButtonText: "Cancel" // Override the close button text
+            });
+        }
+    }
+    ```
+
+=== "JavaScript"
+
+    ```js linenums="1" hl_lines="16" title="Main.controller.js"
+    sap.ui.define([
+        "sap/ui/core/mvc/Controller",
+        "ui5/antares/pro/v2/entry/CreateEntry" // Import the class
+    ], (Controller, CreateEntry) => {
+        "use strict";
+
+        return Controller.extend("your.apps.namespace.Main", {
+            onInit: function () {
+            
+            },
+
+            onCreateProduct: async function () {
+                const entry = new CreateEntry({
+                    controller: this, 
+                    entitySet: "Products",
+                    closeButtonText: "Cancel" // Override the close button text
+                });
+            }
+        });
+    });
+    ```
+
+---
+
+## Close Button Type (closeButtonType)
+
+![ButtonType](https://img.shields.io/badge/Type-ButtonType-blue?style=flat-square)
+
+![Default](https://img.shields.io/badge/Default%20Value-Default-orange?style=flat-square)
+
+[Button Type](https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType) of the close button in the generated dialog. Defaults to **Default**. This property allows the consumer to configure a different button type.
+
+!!! note
+
+    The library **will not generate** any button in the `Component Mode` regardless of which Entry class is utilized.
+
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+---
+
+=== "Getter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Method</th>
+          <th style="width: 25%;">Returns</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 25%;"><code>getCloseButtonType()</code></td>
+          <td style="width: 25%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+          <td>Returns the current close button type. If not explicitly set, returns the default value <code>Default</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+=== "Setter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 30%;">Method</th>
+          <th>Parameter</th>
+          <th style="width: 10%;">Type</th>
+          <th>Mandatory</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 30%;"><code>setCloseButtonType(newValue)</code></td>
+          <td><code>newValue</code></td>
+          <td style="width: 10%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+          <td>✅ Yes</td>
+          <td>Sets a custom button type for the close button, overriding the default <code>Default</code> type.</td>
+        </tr>
+      </tbody>
+    </table>
+
+### Example
+
+=== "TypeScript"
+
+    ```ts linenums="1" hl_lines="17" title="Main.controller.ts"
+    import Controller from "sap/ui/core/mvc/Controller";
+    import CreateEntry from "ui5/antares/pro/v2/entry/CreateEntry"; // Import the class
+    import ButtonType from "sap/m/ButtonType"; // Import the ButtonType enum
+
+    /**
+     * @namespace your.apps.namespace
+     */
+    export default class Main extends Controller {
+        public onInit() {
+        
+        }
+
+        public async onCreateProduct() {
+            const entry = new CreateEntry({
+                controller: this, 
+                entitySet: "Products",
+                closeButtonType: ButtonType.Reject // Override the close button type
+            });
+        }
+    }
+    ```
+
+=== "JavaScript"
+
+    ```js linenums="1" hl_lines="17" title="Main.controller.js"
+    sap.ui.define([
+        "sap/ui/core/mvc/Controller",
+        "ui5/antares/pro/v2/entry/CreateEntry", // Import the class
+        "sap/m/ButtonType" // Import the ButtonType enum
+    ], (Controller, CreateEntry, ButtonType) => {
+        "use strict";
+
+        return Controller.extend("your.apps.namespace.Main", {
+            onInit: function () {
+            
+            },
+
+            onCreateProduct: async function () {
+                const entry = new CreateEntry({
+                    controller: this, 
+                    entitySet: "Products",
+                    closeButtonType: ButtonType.Reject // Override the close button type
                 });
             }
         });
