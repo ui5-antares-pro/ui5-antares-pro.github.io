@@ -50,7 +50,6 @@ nav:
     - UI Settings: 
       - Configuration: core_features/ui_settings/configuration.md
       - Presentation: core_features/ui_settings/presentation.md
-      - Field Settings: core_features/ui_settings/field_settings.md
       - Initial Data: core_features/ui_settings/initial_data.md
       - Messages: core_features/ui_settings/messages.md
       - Layout: core_features/ui_settings/layout.md

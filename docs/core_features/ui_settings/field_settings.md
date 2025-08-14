@@ -1,3 +1,0 @@
-Not available yet...
-
-## Property Settings (propertySettings)
