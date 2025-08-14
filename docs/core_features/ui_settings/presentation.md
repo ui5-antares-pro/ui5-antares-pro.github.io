@@ -478,6 +478,35 @@ Controls the visibility of properties with **Edm.Guid** type in the generated fo
       </tbody>
     </table>
 
+### GuidMode Values
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>All</code></td>
+      <td>Show <strong>all</strong> properties with type <code>Edm.Guid</code>, regardless of whether they are key or non-key fields.</td>
+    </tr>
+    <tr>
+      <td><code>Key</code></td>
+      <td>Show only those <code>Edm.Guid</code> properties that are <strong>keys</strong> in the entity.</td>
+    </tr>
+    <tr>
+      <td><code>NonKey</code></td>
+      <td>Show only <code>Edm.Guid</code> properties that are <strong>not</strong> keys (e.g., foreign keys, reference IDs).</td>
+    </tr>
+    <tr>
+      <td><code>None</code></td>
+      <td>Hide <strong>all</strong> <code>Edm.Guid</code> properties from the generated form.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Example
 
 === "TypeScript"
@@ -528,3 +557,146 @@ Controls the visibility of properties with **Edm.Guid** type in the generated fo
         });
     });
     ```
+
+---
+
+## Property Settings (propertySettings)
+
+![PropertySettings[]](https://img.shields.io/badge/Type-PropertySettings[]-blue?style=flat-square)
+
+Entity-specific configuration for individual properties belonging to the specified **EntitySet**. This array allows consumers to define property-level behaviors, such as marking fields as **required**, **readonly**, or **excluded** from the generated form or table.
+
+<h4>Entry Class Availability</h4>
+<table>
+   <thead>
+      <tr>
+         <th>Property</th>
+         <th><a href="../../../create_entry">CreateEntry</a></th>
+         <th><a href="../../../update_entry">UpdateEntry</a></th>
+         <th><a href="../../../delete_entry">DeleteEntry</a></th>
+         <th><a href="../../../display_entry">DisplayEntry</a></th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>label</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+         <td>required</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">❌ No</td>
+         <td style="text-align:center;">❌ No</td>
+      </tr>
+      <tr>
+         <td>readonly</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">❌ No</td>
+         <td style="text-align:center;">❌ No</td>
+      </tr>
+      <tr>
+         <td>excluded</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+         <td>textInEditModeSource</td>
+         <td style="text-align:center;">✅ Yes*</td>
+         <td style="text-align:center;">✅ Yes*</td>
+         <td style="text-align:center;">❌ No</td>
+         <td style="text-align:center;">❌ No</td>
+      </tr>
+      <tr>
+         <td>layoutData</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+         <td style="text-align:center;">✅ Yes</td>
+      </tr>
+   </tbody>
+</table>
+<p><small>*Requires <code>formType</code> to be <strong>SmartForm</strong></small></p>
+
+<h4>Implementation Mode Availability</h4>
+<table>
+   <thead>
+      <tr>
+         <th>Mode</th>
+         <th>Available</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Dialog Mode</td>
+         <td style="text-align:center;">✅ Yes</td>
+      </tr>
+      <tr>
+         <td>Component Mode</td>
+         <td style="text-align:center;">✅ Yes</td>
+      </tr>
+   </tbody>
+</table>
+
+### PropertySettings Type
+
+<table>
+   <thead>
+      <tr>
+         <th style="width: 25%;">Property</th>
+         <th style="width: 25%;">Type</th>
+         <th>Mandatory</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td style="width: 25%;"><code>name</code></td>
+         <td style="width: 25%;"><code>string</code></td>
+         <td>✅ Yes</td>
+         <td>The technical name of the property in the entity.</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>label</code></td>
+         <td style="width: 25%;"><code>string</code></td>
+         <td>❌ No</td>
+         <td>Consumer-defined label for the property. If not provided, the library tries to derive it in the following order:<br><br>1. Metadata labels (if <code>metadataLabelEnabled</code> is true in the Entry class).<br>2. ResourceModel (i18n) labels based on naming conventions.<br>3. Generated from the property’s naming style (camelCase, CONSTANT_CASE).</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>required</code></td>
+         <td style="width: 25%;"><code>boolean</code></td>
+         <td>❌ No</td>
+         <td>Marks the property as required.</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>readonly</code></td>
+         <td style="width: 25%;"><code>boolean</code></td>
+         <td>❌ No</td>
+         <td>Marks the property as read-only.</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>excluded</code></td>
+         <td style="width: 25%;"><code>boolean</code></td>
+         <td>❌ No</td>
+         <td>Excludes the property from rendering in the generated UI.</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>textInEditModeSource</code></td>
+         <td style="width: 25%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.comp.smartfield.TextInEditModeSource">TextInEditModeSource</a></td>
+         <td>❌ No</td>
+         <td>Source of display text in edit mode. Only applies when <code>formType</code> is <code>SmartForm</code>.</td>
+      </tr>
+      <tr>
+         <td style="width: 25%;"><code>layoutData</code></td>
+         <td style="width: 25%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.core.LayoutData">LayoutData</a></td>
+         <td>❌ No</td>
+         <td>Layout data applied to the generated control.</td>
+      </tr>
+   </tbody>
+</table>
