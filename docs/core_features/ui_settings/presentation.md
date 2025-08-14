@@ -744,3 +744,62 @@ Entity-specific configuration for individual properties belonging to the specifi
         </tr>
       </tbody>
     </table>
+
+### Example
+
+=== "TypeScript"
+
+    ```ts linenums="1" hl_lines="16-20" title="Main.controller.ts"
+    import Controller from "sap/ui/core/mvc/Controller";
+    import CreateEntry from "ui5/antares/pro/v2/entry/CreateEntry"; // Import the class
+
+    /**
+     * @namespace your.apps.namespace
+     */
+    export default class Main extends Controller {
+        public onInit() {
+        
+        }
+
+        public async onCreateProduct() {
+            const entry = new CreateEntry({
+                controller: this, 
+                entitySet: "Products",
+                propertySettings: [
+                    { name: "ProductID", required: true },
+                    { name: "ProductName", label: "Product Name" },
+                    { name: "Category", readonly: true }
+                ]
+            });
+        }
+    }
+    ```
+
+=== "JavaScript"
+
+    ```js linenums="1" hl_lines="16-20" title="Main.controller.js"
+    sap.ui.define([
+        "sap/ui/core/mvc/Controller",
+        "ui5/antares/pro/v2/entry/CreateEntry" // Import the class
+    ], (Controller, CreateEntry) => {
+        "use strict";
+
+        return Controller.extend("your.apps.namespace.Main", {
+            onInit: function () {
+            
+            },
+
+            onCreateProduct: async function () {
+                const entry = new CreateEntry({
+                    controller: this, 
+                    entitySet: "Products",
+                    propertySettings: [
+                        { name: "ProductID", required: true },
+                        { name: "ProductName", label: "Product Name" },
+                        { name: "Category", readonly: true }
+                    ]                    
+                });
+            }
+        });
+    });
+    ```
