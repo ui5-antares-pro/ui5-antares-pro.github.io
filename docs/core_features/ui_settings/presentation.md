@@ -700,3 +700,47 @@ Entity-specific configuration for individual properties belonging to the specifi
       </tr>
    </tbody>
 </table>
+
+---
+
+=== "Getter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 30%;">Method</th>
+          <th style="width: 28%;">Returns</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 30%;"><code>getPropertySettings()</code></td>
+          <td style="width: 28%;"><code>PropertySettings[]</code></td>
+          <td>Returns the current property settings array.</td>
+        </tr>
+      </tbody>
+    </table>
+
+=== "Setter"
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 30%;">Method</th>
+          <th>Parameter</th>
+          <th style="width: 25%;">Type</th>
+          <th>Mandatory</th>
+          <th style="width: 25%;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 30%;"><code>setPropertySettings(newValue)</code></td>
+          <td><code>newValue</code></td>
+          <td style="width: 25%;"><code>PropertySettings[]</code></td>
+          <td>✅ Yes</td>
+          <td style="width: 25%;">Sets the property settings for the generated form or table.</td>
+        </tr>
+      </tbody>
+    </table>
