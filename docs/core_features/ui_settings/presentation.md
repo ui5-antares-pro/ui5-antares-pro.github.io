@@ -1,7 +1,7 @@
 [UI5_INPUT_URL]: https://sapui5.hana.ondemand.com/#/api/sap.m.Input
 [UI5_DATEPICKER_URL]: https://sapui5.hana.ondemand.com/#/api/sap.m.DatePicker
 
-This section describes the user interface–related configuration options available for the Entry classes — [CreateEntry](../../create_entry.md), [UpdateEntry](../../update_entry.md), [DeleteEntry](../../delete_entry.md), and [DisplayEntry](../../display_entry.md).  
+This section describes the **user interface–related configuration** options available for the Entry classes — [CreateEntry](../../create_entry.md), [UpdateEntry](../../update_entry.md), [DeleteEntry](../../delete_entry.md), and [DisplayEntry](../../display_entry.md).  
 
 These options allow consumers to control various aspects of the generated UI, including rendering order, visibilities for properties of `Edm.Guid` type. 
 

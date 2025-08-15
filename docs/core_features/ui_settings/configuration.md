@@ -1,4 +1,4 @@
-This section describes the user interface–related configuration options available for the Entry classes — [CreateEntry](../../create_entry.md), [UpdateEntry](../../update_entry.md), [DeleteEntry](../../delete_entry.md), and [DisplayEntry](../../display_entry.md).  
+This section describes the **user interface–related configuration** options available for the Entry classes — [CreateEntry](../../create_entry.md), [UpdateEntry](../../update_entry.md), [DeleteEntry](../../delete_entry.md), and [DisplayEntry](../../display_entry.md).  
 
 These options allow consumers to control various aspects of the generated UI, including dialog titles, button text and behavior, and other presentation-related settings.  
 
