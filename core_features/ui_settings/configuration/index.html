@@ -1,0 +1,3383 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../presentation/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Configuration - UI5 Antares Pro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#form-position-index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="UI5 Antares Pro" class="md-header__button md-logo" aria-label="UI5 Antares Pro" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UI5 Antares Pro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hasanciftci26/ui5-antares-pro" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ui5-antares-pro
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  UI5 Antares Pro
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../create_entry/" class="md-tabs__link">
+          
+  
+  
+  CreateEntry
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../update_entry/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  UpdateEntry
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../delete_entry/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DeleteEntry
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../display_entry/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DisplayEntry
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Core Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../change_log/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Change Log
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="UI5 Antares Pro" class="md-nav__button md-logo" aria-label="UI5 Antares Pro" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    UI5 Antares Pro
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hasanciftci26/ui5-antares-pro" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ui5-antares-pro
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UI5 Antares Pro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UI5 Antares Pro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/license_and_usage_notice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License and Usage Notice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/local_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CreateEntry
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CreateEntry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create_entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create_entry/key_features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Key Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../create_entry/constructor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constructor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../update_entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UpdateEntry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../delete_entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DeleteEntry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../display_entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DisplayEntry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Core Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    UI Settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            UI Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#form-position-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Position (index)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Position (index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-title-dialogtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog Title (dialogTitle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dialog Title (dialogTitle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-title-formtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Title (formTitle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Title (formTitle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-type-formtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Type (formType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Type (formType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formtype-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormType Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-button-text-submitbuttontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Button Text (submitButtonText)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submit Button Text (submitButtonText)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-button-type-submitbuttontype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Button Type (submitButtonType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submit Button Type (submitButtonType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-button-text-closebuttontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close Button Text (closeButtonText)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Close Button Text (closeButtonText)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-button-type-closebuttontype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close Button Type (closeButtonType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Close Button Type (closeButtonType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Presentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Initial Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label_generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Label Generation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Element
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Content
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Utilities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/value_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Value List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/validation_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validation Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../change_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#form-position-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Position (index)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Position (index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-title-dialogtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog Title (dialogTitle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dialog Title (dialogTitle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-title-formtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Title (formTitle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Title (formTitle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-type-formtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Type (formType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Type (formType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formtype-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormType Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-button-text-submitbuttontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Button Text (submitButtonText)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submit Button Text (submitButtonText)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-button-type-submitbuttontype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Button Type (submitButtonType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submit Button Type (submitButtonType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-button-text-closebuttontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close Button Text (closeButtonText)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Close Button Text (closeButtonText)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-button-type-closebuttontype" class="md-nav__link">
+    <span class="md-ellipsis">
+      Close Button Type (closeButtonType)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Close Button Type (closeButtonType)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Configuration</h1>
+
+<p>This section describes the <strong>user interface–related configuration</strong> options available for the Entry classes — <a href="../../../create_entry/">CreateEntry</a>, <a href="../../../update_entry/">UpdateEntry</a>, <a href="../../../delete_entry/">DeleteEntry</a>, and <a href="../../../display_entry/">DisplayEntry</a>.  </p>
+<p>These options allow consumers to control various aspects of the generated UI, including dialog titles, button text and behavior, and other presentation-related settings.  </p>
+<p>Some configuration options may not be applicable to all Entry classes. Such limitations are clearly mentioned in the description of each feature.</p>
+<p>Configurations can be applied in two ways:</p>
+<ul>
+<li><strong>In the constructor</strong> of the Entry class.</li>
+<li><strong>Via getter/setter methods</strong> through an instance of an Entry class.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All examples in this section use the <strong>CreateEntry</strong> class for demonstration purposes. The same configuration applies to other Entry classes as long as the specific feature is supported.</p>
+</div>
+<hr />
+<h2 id="form-position-index">Form Position (index)</h2>
+<p><img alt="number" src="https://img.shields.io/badge/Type-number-blue?style=flat-square" /></p>
+<p>By default, the Entry classes place the generated form as the first element within the dialog or embedded component. This position can be adjusted using the <strong><code>index</code></strong> configuration, allowing consumers to determine where the form should appear in relation to other generated content.</p>
+<p>This feature is especially useful when multiple navigation properties are configured, each producing its own table or form inside the same container. Additionally, <code>ui5.antares.pro.v2.metadata.NavigationProperty</code> instances can also define an <strong><code>index</code></strong> to control the placement of their generated content.</p>
+<style>
+  /* On small screens, stack the divs vertically */
+  @media (max-width: 600px) {
+    .responsive-flex {
+      flex-direction: column !important;
+      gap: 0px !important; /* smaller gap for stacked layout */
+    }
+  }
+</style>
+
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Entry Class</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="../../../create_entry">CreateEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../../update_entry">UpdateEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../../delete_entry">DeleteEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td><a href="../../../display_entry">DisplayEntry</a></td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Getter</label><label for="__tabbed_1_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getIndex()</code></td>
+      <td><code>number</code></td>
+      <td>Current index of the generated form; supports negative values to control its position in the dialog or component.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>setIndex(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>number</code></td>
+      <td>✅ Yes</td>
+      <td>Sets the index for the generated form; supports negative values for relative positioning.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">TypeScript</label><label for="__tabbed_2_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">NavigationProperty</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/metadata/NavigationProperty&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">index</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="w"> </span><span class="c1">// Position the form after the navigation property content</span>
+</span><span class="w">        </span><span class="p">});</span>
+
+<span class="w">        </span><span class="nx">entry</span><span class="p">.</span><span class="nx">addNavigationProperty</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">NavigationProperty</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;toSupplier&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">index</span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="w"> </span><span class="c1">// Position the navigation property content before the main form</span>
+</span><span class="w">        </span><span class="p">}));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/metadata/NavigationProperty&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">,</span><span class="w"> </span><span class="nx">NavigationProperty</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">index</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="c1">// Position the form after the navigation property content</span>
+</span><span class="w">            </span><span class="p">});</span>
+
+<span class="w">            </span><span class="nx">entry</span><span class="p">.</span><span class="nx">addNavigationProperty</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">NavigationProperty</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;toSupplier&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">index</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="c1">// Position the navigation property content before the main form</span>
+</span><span class="w">            </span><span class="p">}));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="dialog-title-dialogtitle">Dialog Title (dialogTitle)</h2>
+<p><img alt="string" src="https://img.shields.io/badge/Type-string-blue?style=flat-square" /></p>
+<p><img alt="Localized Text" src="https://img.shields.io/badge/Default%20Value-Localized%20Text-orange?style=flat-square" /></p>
+<p>In dialog mode, the Entry classes generate a dialog with a default title composed of localized text and the associated <code>EntitySet</code> name. This default title ensures clarity for end users, but consumers can easily override it using the <code>dialogTitle</code> configuration.</p>
+<p>This feature is especially useful when the default title is too generic or when you want to provide a more descriptive, user-friendly title in the dialog header.</p>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Getter</label><label for="__tabbed_3_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getDialogTitle()</code></td>
+      <td><code>string</code></td>
+      <td>Returns the current dialog title. If not explicitly set, returns the generated default title.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>setDialogTitle(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>string</code></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom title for the dialog, replacing the generated default title.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_1">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">TypeScript</label><label for="__tabbed_4_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">dialogTitle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Create New Product&quot;</span><span class="w"> </span><span class="c1">// Override the default dialog title</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">dialogTitle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Create New Product&quot;</span><span class="w"> </span><span class="c1">// Override the default dialog title</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="form-title-formtitle">Form Title (formTitle)</h2>
+<p><img alt="string" src="https://img.shields.io/badge/Type-string-blue?style=flat-square" /></p>
+<p>The <code>formTitle</code> property defines the title displayed above the generated form. By default, no title is shown. This property allows you to set a clear and descriptive heading, improving the visual structure and user experience of the form.</p>
+<p>A custom <code>formTitle</code> is particularly helpful when forms are part of a larger UI and need to convey context or purpose to the end user.</p>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Getter</label><label for="__tabbed_5_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th style="width: 25%;">Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getFormTitle()</code></td>
+      <td style="width: 25%;"><code>string | undefined</code></td>
+      <td>Returns the current form title. If no title is set, returns <code>undefined</code>.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 30%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 30%;"><code>setFormTitle(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>string</code></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom title for the form.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_2">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">TypeScript</label><label for="__tabbed_6_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">formTitle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Product Details&quot;</span><span class="w"> </span><span class="c1">// Set a custom form title</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">formTitle</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Product Details&quot;</span><span class="w"> </span><span class="c1">// Set a custom form title</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="form-type-formtype">Form Type (formType)</h2>
+<p><img alt="FormType" src="https://img.shields.io/badge/Type-FormType-blue?style=flat-square" /></p>
+<p><img alt="SmartForm" src="https://img.shields.io/badge/Default%20Value-SmartForm-orange?style=flat-square" /></p>
+<p>Determines the type of form generated for the specified <code>EntitySet</code>. 
+By default, the library creates a <a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.comp.smartform.SmartForm">SmartForm</a>, which is metadata-driven and supports advanced features such as smart fields, annotations, and automatic OData integration.</p>
+<p>This property allows consumers to switch to a <a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.layout.form.SimpleForm">SimpleForm</a> when a simpler, less metadata-heavy layout is desired. <code>SimpleForm</code> offers more control over layout and content, making it suitable for custom UI scenarios or when metadata is incomplete.</p>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Getter</label><label for="__tabbed_7_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getFormType()</code></td>
+      <td><code>FormType</code></td>
+      <td>Returns the current form type. If not explicitly set, returns the default value <code>"SmartForm"</code>.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>setFormType(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>FormType</code></td>
+      <td>✅ Yes</td>
+      <td>Sets the type of form to generate. Must be either <code>"SmartForm"</code> or <code>"SimpleForm"</code>.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="formtype-values">FormType Values</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>SmartForm</code></td>
+      <td>Generates a <a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.comp.smartform.SmartForm" target="_blank" rel="noopener">SmartForm</a> using OData metadata to automatically create fields, labels, and layout.</td>
+    </tr>
+    <tr>
+      <td><code>SimpleForm</code></td>
+      <td>Generates a <a href="https://sapui5.hana.ondemand.com/#/api/sap.ui.layout.form.SimpleForm" target="_blank" rel="noopener">SimpleForm</a>, offering more flexibility for custom layouts and manual field creation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example_3">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">TypeScript</label><label for="__tabbed_8_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">formType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SimpleForm&quot;</span><span class="w"> </span><span class="c1">// Switch to SimpleForm</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">formType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SimpleForm&quot;</span><span class="w"> </span><span class="c1">// Switch to SimpleForm</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="submit-button-text-submitbuttontext">Submit Button Text (submitButtonText)</h2>
+<p><img alt="string" src="https://img.shields.io/badge/Type-string-blue?style=flat-square" /></p>
+<p><img alt="Localized Text" src="https://img.shields.io/badge/Default%20Value-Localized%20Text-orange?style=flat-square" /></p>
+<p>Text displayed on the submit button within the generated dialog. A default localized text is provided by the library based on the current language. This property allows the consumer to override the button text.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The submit button is not generated when using the <strong>DisplayEntry</strong> class. Additionally, the library <strong>will not generate</strong> any button in the <code>Component Mode</code> regardless of which Entry class is utilized.</p>
+</div>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">❌ No</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Getter</label><label for="__tabbed_9_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getSubmitButtonText()</code></td>
+      <td><code>string</code></td>
+      <td>Returns the current submit button text. If not explicitly set, returns the default localized text.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 35%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 35%;"><code>setSubmitButtonText(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>string</code></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom text for the submit button, overriding the default localized text.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_4">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">TypeScript</label><label for="__tabbed_10_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">submitButtonText</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Send Data&quot;</span><span class="w"> </span><span class="c1">// Override the submit button text</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">submitButtonText</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Send Data&quot;</span><span class="w"> </span><span class="c1">// Override the submit button text</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="submit-button-type-submitbuttontype">Submit Button Type (submitButtonType)</h2>
+<p><img alt="ButtonType" src="https://img.shields.io/badge/Type-ButtonType-blue?style=flat-square" /></p>
+<p><img alt="Emphasized" src="https://img.shields.io/badge/Default%20Value-Emphasized-orange?style=flat-square" /></p>
+<p><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">Button Type</a> of the submit button in the generated dialog. Defaults to <strong>Emphasized</strong>. This property allows the consumer to configure a different button type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The submit button is not generated when using the <strong>DisplayEntry</strong> class. Additionally, the library <strong>will not generate</strong> any button in the <code>Component Mode</code> regardless of which Entry class is utilized.</p>
+</div>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">❌ No</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Getter</label><label for="__tabbed_11_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th style="width: 25%;">Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getSubmitButtonType()</code></td>
+      <td style="width: 25%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+      <td>Returns the current submit button type. If not explicitly set, returns the default value <code>Emphasized</code>.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 30%;">Method</th>
+      <th>Parameter</th>
+      <th style="width: 10%;">Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 30%;"><code>setSubmitButtonType(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td style="width: 10%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom button type for the submit button, overriding the default <code>Emphasized</code> type.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_5">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">TypeScript</label><label for="__tabbed_12_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">ButtonType</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/m/ButtonType&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the ButtonType enum</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">submitButtonType</span><span class="o">:</span><span class="w"> </span><span class="kt">ButtonType.Reject</span><span class="w"> </span><span class="c1">// Override the submit button type</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="w">    </span><span class="s2">&quot;sap/m/ButtonType&quot;</span><span class="w"> </span><span class="c1">// Import the ButtonType enum</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">,</span><span class="w"> </span><span class="nx">ButtonType</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">submitButtonType</span><span class="o">:</span><span class="w"> </span><span class="nx">ButtonType</span><span class="p">.</span><span class="nx">Reject</span><span class="w"> </span><span class="c1">// Override the submit button type</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="close-button-text-closebuttontext">Close Button Text (closeButtonText)</h2>
+<p><img alt="string" src="https://img.shields.io/badge/Type-string-blue?style=flat-square" /></p>
+<p><img alt="Localized Text" src="https://img.shields.io/badge/Default%20Value-Localized%20Text-orange?style=flat-square" /></p>
+<p>Text displayed on the close button within the generated dialog. A default localized text is provided by the library based on the current language. This property allows the consumer to override the button text.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The library <strong>will not generate</strong> any button in the <code>Component Mode</code> regardless of which Entry class is utilized.</p>
+</div>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Getter</label><label for="__tabbed_13_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th>Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getCloseButtonText()</code></td>
+      <td><code>string</code></td>
+      <td>Returns the current close button text. If not explicitly set, returns the default localized text.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 35%;">Method</th>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 35%;"><code>setCloseButtonText(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td><code>string</code></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom text for the close button, overriding the default localized text.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_6">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">TypeScript</label><label for="__tabbed_14_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">closeButtonText</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span><span class="w"> </span><span class="c1">// Override the close button text</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">closeButtonText</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cancel&quot;</span><span class="w"> </span><span class="c1">// Override the close button text</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="close-button-type-closebuttontype">Close Button Type (closeButtonType)</h2>
+<p><img alt="ButtonType" src="https://img.shields.io/badge/Type-ButtonType-blue?style=flat-square" /></p>
+<p><img alt="Default" src="https://img.shields.io/badge/Default%20Value-Default-orange?style=flat-square" /></p>
+<p><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">Button Type</a> of the close button in the generated dialog. Defaults to <strong>Default</strong>. This property allows the consumer to configure a different button type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The library <strong>will not generate</strong> any button in the <code>Component Mode</code> regardless of which Entry class is utilized.</p>
+</div>
+<div class="responsive-flex" style="display: flex; gap: 50px; align-items: flex-start;">
+
+  <div>
+    <h4>Entry Class Availability</h4>
+    <table>
+       <thead>
+          <tr>
+             <th>Entry Class</th>
+             <th>Available</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td><a href="../../../create_entry">CreateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../update_entry">UpdateEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../delete_entry">DeleteEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+          <tr>
+             <td><a href="../../../display_entry">DisplayEntry</a></td>
+             <td style="text-align:center;">✅ Yes</td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+
+  <div>
+    <h4>Implementation Mode Availability</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dialog Mode</td>
+          <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Component Mode</td>
+          <td style="text-align:center;">❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
+</div>
+
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Getter</label><label for="__tabbed_15_2">Setter</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Method</th>
+      <th style="width: 25%;">Returns</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><code>getCloseButtonType()</code></td>
+      <td style="width: 25%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+      <td>Returns the current close button type. If not explicitly set, returns the default value <code>Default</code>.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><table>
+  <thead>
+    <tr>
+      <th style="width: 30%;">Method</th>
+      <th>Parameter</th>
+      <th style="width: 10%;">Type</th>
+      <th>Mandatory</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 30%;"><code>setCloseButtonType(newValue)</code></td>
+      <td><code>newValue</code></td>
+      <td style="width: 10%;"><a href="https://sapui5.hana.ondemand.com/#/api/sap.m.ButtonType">ButtonType</a></td>
+      <td>✅ Yes</td>
+      <td>Sets a custom button type for the close button, overriding the default <code>Default</code> type.</td>
+    </tr>
+  </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h3 id="example_7">Example</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">TypeScript</label><label for="__tabbed_16_2">JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.ts</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">ButtonType</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;sap/m/ButtonType&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the ButtonType enum</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @namespace your.apps.namespace</span>
+<span class="cm"> */</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Controller</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">onCreateProduct</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="kt">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">            </span><span class="nx">closeButtonType</span><span class="o">:</span><span class="w"> </span><span class="kt">ButtonType.Reject</span><span class="w"> </span><span class="c1">// Override the close button type</span>
+</span><span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main.controller.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">sap</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">define</span><span class="p">([</span>
+<span class="w">    </span><span class="s2">&quot;sap/ui/core/mvc/Controller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ui5/antares/pro/v2/entry/CreateEntry&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Import the class</span>
+<span class="w">    </span><span class="s2">&quot;sap/m/ButtonType&quot;</span><span class="w"> </span><span class="c1">// Import the ButtonType enum</span>
+<span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="nx">Controller</span><span class="p">,</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">,</span><span class="w"> </span><span class="nx">ButtonType</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s2">&quot;your.apps.namespace.Main&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onInit</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nx">onCreateProduct</span><span class="o">:</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CreateEntry</span><span class="p">({</span>
+<span class="w">                </span><span class="nx">controller</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                </span><span class="nx">entitySet</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Products&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">                </span><span class="nx">closeButtonType</span><span class="o">:</span><span class="w"> </span><span class="nx">ButtonType</span><span class="p">.</span><span class="nx">Reject</span><span class="w"> </span><span class="c1">// Override the close button type</span>
+</span><span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/hasanciftci26" target="_blank" rel="noopened">Hasan Ciftci</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hasanciftci26" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/hasan-%C3%A7ift%C3%A7i-4b3646170" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
