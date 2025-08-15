@@ -13,6 +13,8 @@ Configurations can be applied in two ways:
 
     All examples in this section use the **CreateEntry** class for demonstration purposes. The same configuration applies to other Entry classes as long as the specific feature is supported.
 
+---
+
 ## Form Position (index)
 
 ![number](https://img.shields.io/badge/Type-number-blue?style=flat-square)
